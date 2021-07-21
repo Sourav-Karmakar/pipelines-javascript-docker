@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: souravkarmakarpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: souravkarmakarpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: souravkarmakarpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: souravkarmakarpipelinesjavascriptdocker 
+          image: aksintegrationtest.azurecr.io/souravkarmakarpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
